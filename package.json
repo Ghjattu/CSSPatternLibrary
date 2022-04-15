@@ -1,0 +1,24 @@
+{
+  "name": "css-pattern-library",
+  "version": "1.0.0",
+  "description": "A pattern library for learning purposes",
+  "main": "index.js",
+  "scripts": {
+    "build": "kss --config kss-config.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ghjattu/CSSPatternLibrary.git"
+  },
+  "keywords": [],
+  "author": "Ghjattu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ghjattu/CSSPatternLibrary/issues"
+  },
+  "homepage": "https://github.com/Ghjattu/CSSPatternLibrary#readme",
+  "devDependencies": {
+    "kss": "^3.0.1"
+  }
+}
