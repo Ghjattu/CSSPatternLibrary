@@ -1,0 +1,143 @@
+/*
+Media
+
+两种不同的媒体模块
+
+Markup:
+<article class="media {{modifier_class}}">
+    <a href="#" class="media-image-container">
+        <img class="media-image" src="https://tva3.sinaimg.cn/large/87c01ec7gy1fsnqqf0eswj21kw0w0nar.jpg"
+             alt="media-image"/>
+    </a>
+    <div class="media-body">
+        <h3><a href="#">一天掉多少根头发</a></h3>
+        <p>
+            莎士比亚曾经说过，那脑袋里的智慧，就像打火石里的火花一样，不去打它是不肯出来的。
+            这不禁令我深思我们都知道，只要有意义，那么就必须慎重考虑。 本人也是经过了深思熟虑，在每个日日夜夜思考这个问题。
+            别林斯基曾经说过，好的书籍是最贵重的珍宝。
+        </p>
+        <div class="media-timestamp">
+            <span>发布于</span>
+            <span>2022-03-13</span>
+        </div>
+    </div>
+</article>
+
+.media--reverse   - 左边显示内容，右边显示图片
+
+Styleguide Media
+*/
+.media {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    position: relative;
+
+    border-radius: 10px;
+    width: 100%;
+
+    background-color: #ffffff;
+    box-shadow: 0 1px 20px -4px #e8e8e8;
+    transition: all .8s ease;
+}
+
+@media (min-width: 50em) {
+    .media {
+        flex-direction: row;
+    }
+
+    .media.media--reverse {
+        flex-direction: row-reverse;
+    }
+}
+
+.media:hover {
+    box-shadow: 0 1px 20px 10px #e8e8e8;
+}
+
+.media-image-container {
+    display: block;
+
+    height: 200px;
+}
+
+@media (min-width: 35em) {
+    .media-image-container {
+        height: 230px;
+    }
+}
+
+@media (min-width: 50em) {
+    .media-image-container {
+        height: auto;
+    }
+}
+
+.media-image {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+
+    object-position: center;
+    object-fit: cover;
+}
+
+.media-body {
+    display: flex;
+    flex-direction: column;
+
+    padding: 1em 1em .5em;
+}
+
+@media (min-width: 50em) {
+    .media-image-container {
+        flex: 4;
+    }
+
+    .media-body {
+        flex: 6;
+    }
+}
+
+.media-body > h3 {
+    margin: 0;
+
+    font-size: 1.2em;
+    font-weight: 700;
+    text-align: center;
+}
+
+.media-body > h3 > a {
+    text-decoration: none;
+
+    color: #000000;
+
+    transition: all .25s ease;
+}
+
+.media-body > h3 > a:hover {
+    color: #00dffc;
+}
+
+.media-body > p {
+    margin: 0;
+    padding: .5em;
+
+    color: #747474;
+}
+
+.media-timestamp {
+    margin: auto 0 0;
+    border-top: 1px solid #e4e7ed;
+    padding: .5em .5em 0;
+
+    text-align: right;
+
+    color: #606266;
+}
+
+.media.media--reverse .media-timestamp {
+    text-align: left;
+}
+
